@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "dataset": "hotpot_dev_distractor_v1.json",
+    "mode": "groq",
+    "num_records": 6,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 3,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1284,
+      "avg_latency_ms": 12910.67
+    },
+    "reflexion": {
+      "count": 3,
+      "em": 0.6667,
+      "avg_attempts": 1.6667,
+      "avg_token_estimate": 4379.67,
+      "avg_latency_ms": 92604.67
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": -0.3333,
+      "attempts_abs": 0.6667,
+      "tokens_abs": 3095.67,
+      "latency_abs": 79694.0
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 3
+      },
+      "reflexion": {
+        "none": 2,
+        "wrong_final_answer": 1
+      }
+    },
+    "by_mode": {
+      "none": 5,
+      "wrong_final_answer": 1
+    },
+    "analyzed_modes": [
+      "wrong_final_answer"
+    ]
+  },
+  "examples": [
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "To determine if Scott Derrickson and Ed Wood are of the same nationality, we need to identify the required intermediate entities: the nationality of Scott Derrickson and the nationality of Ed Wood.\n\nFrom the context, we can see that Scott Derrickson is an American director, screenwriter, and producer. \n\nWe also know that Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\n\nThey are of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c7595554299585d9e36b6",
+      "agent_type": "react",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities. \n\n1. The woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is Shirley Temple.\n2. We need to find the government position held by Shirley Temple.\n\nFrom the context, we know that Shirley Temple was an American actress, singer, dancer, businesswoman, and diplomat. She was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States.\n\nTherefore, the government position held by the woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is:\n\nChief of Protocol of the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85ea095542994775f606a8",
+      "agent_type": "react",
+      "gold_answer": "Animorphs",
+      "predicted_answer": "The science fantasy young adult series told in first person with companion books narrating the stories of enslaved worlds and alien species is the Animorphs series.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "To answer the question, we need to identify the nationality of both Scott Derrickson and Ed Wood. \n\nThe required intermediate entities are:\n- Scott Derrickson's nationality\n- Ed Wood's nationality\n\nFrom the context, we can see that:\n- Scott Derrickson is an American director, screenwriter, and producer.\n- Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\nScott Derrickson and Ed Wood were of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c7595554299585d9e36b6",
+      "agent_type": "reflexion",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "Janet Waldo, the woman who portrayed Corliss Archer in the film \"Kiss and Tell\", was a radio and voice actress. However, to answer the question, we need to find a government position held by a woman who was involved in the film industry. \n\nThe context mentions Shirley Temple, who was a child actress and later became a diplomat, serving as United States ambassador to Ghana and Czechoslovakia. However, there is no direct connection between her diplomatic roles and the film \"Kiss and Tell\".\n\nAnother relevant piece of information is that the film \"Kiss and Tell\" is a 1945 American comedy film starring Shirley Temple as Corliss Archer. However, the question asks for a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\", not a government position held by Shirley Temple.\n\nThe context also mentions Charles Craft, an English-born American film and television editor, who worked on several series, including \"Meet Corliss Archer\". However, there is no information about a government position held by a woman who was involved in the film industry.\n\nAfter re-examining the context, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Secretary of State for Constitutional Affairs, a British government position. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Village Accountant, an administrative government position found in rural parts of the Indian sub-continent. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about a government position held by a woman who portrayed Corliss Archer in the film \"Kiss and Tell\". However, I can try to find a connection between the film industry and government positions.\n\nThe context mentions the Lord High Treasurer, a government position in the English and British governments. However, there is no direct connection between this position and the film \"Kiss and Tell\".\n\nAfter re-examining the context again, I found that there is no direct information about",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a85ea095542994775f606a8",
+      "agent_type": "reflexion",
+      "gold_answer": "Animorphs",
+      "predicted_answer": "The science fantasy young adult series told in first person with companion books narrating the stories of enslaved worlds and alien species is the Animorphs series.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

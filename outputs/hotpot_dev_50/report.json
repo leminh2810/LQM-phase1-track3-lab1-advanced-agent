@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "dataset": "hotpot_dev_distractor_v1.json",
+    "mode": "groq",
+    "num_records": 34,
+    "agents": [
+      "react"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 34,
+      "em": 0.6471,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1198.03,
+      "avg_latency_ms": 335787.06
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 22,
+        "wrong_final_answer": 12
+      }
+    },
+    "by_mode": {
+      "none": 22,
+      "wrong_final_answer": 12
+    },
+    "analyzed_modes": [
+      "wrong_final_answer"
+    ]
+  },
+  "examples": [
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "To determine if Scott Derrickson and Ed Wood are of the same nationality, we need to identify the required intermediate entities: the nationality of Scott Derrickson and the nationality of Ed Wood.\n\nFrom the context, we can see that Scott Derrickson is an American director, screenwriter, and producer. \n\nWe also know that Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\n\nThey are of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c7595554299585d9e36b6",
+      "agent_type": "react",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities. \n\n1. The woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is Shirley Temple.\n2. We need to find the government position held by Shirley Temple.\n\nFrom the context, we know that Shirley Temple was an American actress, singer, dancer, businesswoman, and diplomat. She was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States.\n\nTherefore, the government position held by the woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is:\n\nChief of Protocol of the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85ea095542994775f606a8",
+      "agent_type": "react",
+      "gold_answer": "Animorphs",
+      "predicted_answer": "The science fantasy young adult series told in first person with companion books narrating the stories of enslaved worlds and alien species is the Animorphs series.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adbf0a255429947ff17385a",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "The Laleli Mosque and Esma Sultan Mansion are located in the same neighborhood, Laleli, Fatih, Istanbul, Turkey.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8e3ea95542995a26add48d",
+      "agent_type": "react",
+      "gold_answer": "Greenwich Village, New York City",
+      "predicted_answer": "The director of the romantic comedy \"Big Stone Gap\" is Adriana Trigiani.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd94525542992ac4f382d2",
+      "agent_type": "react",
+      "gold_answer": "YG Entertainment",
+      "predicted_answer": "The required intermediate entities are: \n- WINNER \n- YG Entertainment \n- South Korean boy group \n\nThe final answer is: YG Entertainment",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a85b2d95542997b5ce40028",
+      "agent_type": "react",
+      "gold_answer": "Eenasul Fateh",
+      "predicted_answer": "Eenasul Fateh, also known by his stage name Aladin, is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a87ab905542996e4f3088c1",
+      "agent_type": "react",
+      "gold_answer": "3,677 seated",
+      "predicted_answer": "The arena where the Lewiston Maineiacs played their home games can seat 3,677 people.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7bbb64554299042af8f7cc",
+      "agent_type": "react",
+      "gold_answer": "Terry Richardson",
+      "predicted_answer": "To answer the question, we need to identify the birth dates of Annie Morton and Terry Richardson. \n\nAnnie Morton was born on October 8, 1970, and Terry Richardson was born on August 14, 1965.\n\nSince 1970 is greater than 1965, Annie Morton is older than Terry Richardson.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8db19d5542994ba4e3dd00",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Local H is from the United States, specifically from Zion, Illinois. For Against is also from the United States, specifically from Lincoln, Nebraska.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7166395542994082a3e814",
+      "agent_type": "react",
+      "gold_answer": "Kansas Song",
+      "predicted_answer": "The fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area is the \"Rock Chalk, Jayhawk\".",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a877e5d5542993e715abf7d",
+      "agent_type": "react",
+      "gold_answer": "David Weissman",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities. \n\n1. The screenwriter who co-wrote \"Evolution\" is David Weissman.\n2. David Weissman co-wrote a film starring Nicolas Cage and T\u00e9a Leoni, which is \"The Family Man\".\n\nTherefore, the final answer is:\nDavid Weissman",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3b0bf5542992ade7c6e39",
+      "agent_type": "react",
+      "gold_answer": "1999",
+      "predicted_answer": "1999",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab56e32554299637185c594",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities. \n\nThe question is about whether Random House Tower and 888 7th Avenue are used for real estate. \n\nWe can start by looking at the context provided. \n\nRandom House Tower is mentioned in the context of being a mixed-use tower in New York City, used as the headquarters of book publisher Random House and a luxury apartment complex. \n\n888 7th Avenue is mentioned in the context of being a 628 ft tall modern-style office skyscraper in Midtown Manhattan, which currently carries the Vornado Realty Trust corporate headquarters. \n\nHowever, we also need to consider the context of real estate technology and loan modification, as they may provide additional information about the use of these buildings for real estate purposes. \n\nAfter analyzing the context, we can conclude that both Random House Tower and 888 7th Avenue are used for real estate purposes, but in different ways. \n\nRandom House Tower is used as a luxury apartment complex, while 888 7th Avenue is used as an office skyscraper and corporate headquarters. \n\nTherefore, the final answer is:\n\nYes, both Random House Tower and 888 7th Avenue are used for real estate purposes.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab6d09255429954757d337d",
+      "agent_type": "react",
+      "gold_answer": "from 1986 to 2013",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: the football manager who recruited David Beckham and the timeframe during which he managed Manchester United.\n\nFrom the context, we know that David Beckham was part of the \"Class of '92\" and was drafted into Manchester United by Alex Ferguson. Therefore, the required intermediate entity is Alex Ferguson.\n\nThe next step is to find the timeframe during which Alex Ferguson managed Manchester United. According to the context, Alex Ferguson managed Manchester United from 1986 to 2013.\n\nSo, the final answer is:\n\n1986-2013",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a75e05c55429976ec32bc5f",
+      "agent_type": "react",
+      "gold_answer": "9,984",
+      "predicted_answer": "Brown County, Kansas has a population of 9,984 inhabitants.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3e45655429976abd1bcd4",
+      "agent_type": "react",
+      "gold_answer": "the North Atlantic Conference",
+      "predicted_answer": "The conference formerly known as North Atlantic Conference from 1988 to 1996 is the America East Conference.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab29c24554299449642c932",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Giuseppe Verdi and Ambroise Thomas are both opera composers.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0d4c9554299603e418468",
+      "agent_type": "react",
+      "gold_answer": "1969 until 1974",
+      "predicted_answer": "Richard Nixon served as the 37th President of the United States from 1969 until 1974.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8133725542995ce29dcbdb",
+      "agent_type": "react",
+      "gold_answer": "Robert Erskine Childers DSC",
+      "predicted_answer": "Robert Erskine Childers was from England.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae7a8175542993210983ed8",
+      "agent_type": "react",
+      "gold_answer": "Pedro Rodr\u00edguez",
+      "predicted_answer": "Eduardo Troconis",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae6050f55429929b0807a5e",
+      "agent_type": "react",
+      "gold_answer": "Sonic",
+      "predicted_answer": "Jim Cummings voiced Winnie the Pooh in \"A Rather Blustery Day\" and also voiced Dr. Robotnik in the \"Sonic the Hedgehog\" series, where he voiced Miles \"Tails\" Prower.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adddccd5542997dc7907069",
+      "agent_type": "react",
+      "gold_answer": "keyboard function keys",
+      "predicted_answer": "The Apple Watch can control the program Apple Remote was originally designed to interact with, which is Front Row.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae2070a5542994d89d5b313",
+      "agent_type": "react",
+      "gold_answer": "Badly Drawn Boy",
+      "predicted_answer": "To determine which performance act has a higher instrument to person ratio, we need to identify the number of instruments and the number of people in each act.\n\nFor Wolf Alice, we know that the band consists of four people: Ellie Rowsell (vocals, guitar), Joff Oddie (guitars, vocals), Theo Ellis (bass), and Joel Amey (drums, vocals). However, we don't know the exact number of instruments they play.\n\nFor Badly Drawn Boy, we know that he is a multi-instrumentalist and has played several instruments on his albums, including guitar, piano, and drums. However, we don't know the exact number of instruments he plays.\n\nTo make an educated guess, let's assume that Wolf Alice plays a typical rock band setup with 4-5 instruments (guitar, bass, drums, and possibly keyboards or other instruments). This would give them a ratio of 4-5 instruments to 4 people.\n\nBadly Drawn Boy, on the other hand, has been known to play a wide range of instruments on his albums, including guitar, piano, drums, and others. Let's assume that he plays around 6-8 instruments on average.\n\nBased on these estimates, it appears that Badly Drawn Boy has a higher instrument to person ratio than Wolf Alice.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae22b8d554299234fd0440f",
+      "agent_type": "react",
+      "gold_answer": "World's Best Goalkeeper",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: the father of Kasper Schmeichel and the year in which the IFFHS voted for him.\n\nFrom the context, we know that Kasper Schmeichel's father is Peter Schmeichel. We also know that Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992.\n\nTherefore, the final answer is:\n\nPeter Schmeichel",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a722b8655429971e9dc9329",
+      "agent_type": "react",
+      "gold_answer": "Barton Lee Hazlewood",
+      "predicted_answer": "The writer of \"These Boots Are Made for Walkin'\" is Lee Hazlewood. \n\nThe person who died in 2007 is Jim Shoulders.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf37a95542995ec70e8f97",
+      "agent_type": "react",
+      "gold_answer": "1838",
+      "predicted_answer": "1838",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd259d55429924427fcf1a",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Both Dictyosperma and Huernia are described as a genus.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a828c8355429966c78a6a50",
+      "agent_type": "react",
+      "gold_answer": "Henry J. Kaiser",
+      "predicted_answer": "Henry J. Kaiser founded Kaiser Ventures corporation and became known as the father of modern American shipbuilding.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8a3e745542996c9b8d5e70",
+      "agent_type": "react",
+      "gold_answer": "Arena of Khazan",
+      "predicted_answer": "The adventure in \"Tunnels and Trolls\" is Arena of Khazan.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac23ff0554299636651994d",
+      "agent_type": "react",
+      "gold_answer": "2000",
+      "predicted_answer": "The album \"Crack a Smile...and More!\" was released on March 14, 2000.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae4a3265542995ad6573de5",
+      "agent_type": "react",
+      "gold_answer": "Fujioka, Gunma",
+      "predicted_answer": "Buck-Tick is from Fujioka, Gunma.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0361155429925eb1afc2c",
+      "agent_type": "react",
+      "gold_answer": "Charles Eug\u00e8ne",
+      "predicted_answer": "Charles Nungesser.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abc0a5d5542993f40c73c64",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: the country of origin for each documentary.\n\nThe country of origin for \"In the Realm of the Hackers\" is Australia, as stated in the context.\n\nThe country of origin for \"Freakonomics\" is America, as stated in the context.\n\nSince \"Freakonomics\" is an American documentary, and \"In the Realm of the Hackers\" is an Australian documentary, the answer to the question is:\n\nNo, only Freakonomics is an American documentary.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

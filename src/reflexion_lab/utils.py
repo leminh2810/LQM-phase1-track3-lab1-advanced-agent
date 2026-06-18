@@ -2,8 +2,8 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Iterable
-from .schemas import QAExample, RunRecord
+from typing import Any, Iterable
+from .schemas import ContextChunk, QAExample, RunRecord
 
 def normalize_answer(text: str) -> str:
     text = text.strip().lower()
@@ -12,8 +12,36 @@ def normalize_answer(text: str) -> str:
     return text
 
 def load_dataset(path: str | Path) -> list[QAExample]:
-    raw = json.loads(Path(path).read_text(encoding="utf-8"))
-    return [QAExample.model_validate(item) for item in raw]
+    raw = json.loads(Path(path).read_text(encoding="utf-8-sig"))
+    return [normalize_example(item) for item in raw]
+
+def normalize_example(item: dict[str, Any]) -> QAExample:
+    if "qid" in item and "gold_answer" in item:
+        return QAExample.model_validate(item)
+
+    if "_id" in item and "answer" in item:
+        supporting_titles = {title for title, _ in item.get("supporting_facts", [])}
+        context_items = item.get("context", [])
+        if supporting_titles:
+            context_items = [chunk for chunk in context_items if chunk[0] in supporting_titles]
+        return QAExample(
+            qid=item["_id"],
+            difficulty=normalize_difficulty(item.get("level", "medium")),
+            question=item["question"],
+            gold_answer=item["answer"],
+            context=[
+                ContextChunk(title=title, text=" ".join(sentences))
+                for title, sentences in context_items
+            ],
+        )
+
+    raise ValueError(f"Unsupported dataset example format: keys={sorted(item.keys())}")
+
+def normalize_difficulty(value: str) -> str:
+    value = value.strip().lower()
+    if value in {"easy", "medium", "hard"}:
+        return value
+    return "medium"
 
 def save_jsonl(path: str | Path, records: Iterable[RunRecord]) -> None:
     path = Path(path)

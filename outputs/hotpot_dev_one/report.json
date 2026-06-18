@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "dataset": "hotpot_dev_distractor_v1.json",
+    "mode": "groq",
+    "num_records": 2,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 1,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1123,
+      "avg_latency_ms": 2642
+    },
+    "reflexion": {
+      "count": 1,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1119,
+      "avg_latency_ms": 21740
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.0,
+      "attempts_abs": 0,
+      "tokens_abs": -4,
+      "latency_abs": 19098
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 1
+      },
+      "reflexion": {
+        "none": 1
+      }
+    },
+    "by_mode": {
+      "none": 2
+    },
+    "analyzed_modes": []
+  },
+  "examples": [
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "To determine if Scott Derrickson and Ed Wood are of the same nationality, we need to identify the required intermediate entities: the nationality of Scott Derrickson and the nationality of Ed Wood.\n\nFrom the context, we can see that Scott Derrickson is an American director, screenwriter, and producer. \n\nWe also know that Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\n\nThey are of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "To answer the question, we need to identify the nationality of both Scott Derrickson and Ed Wood. \n\nThe required intermediate entities are:\n- Scott Derrickson's nationality\n- Ed Wood's nationality\n\nFrom the context, we can see that:\n- Scott Derrickson is an American director, screenwriter, and producer.\n- Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\nScott Derrickson and Ed Wood were of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

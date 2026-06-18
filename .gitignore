@@ -8,4 +8,5 @@ env/
 .env
 .pytest_cache/
 outputs/
+data/hotpot_dev_distractor_v1.json
 .DS_Store

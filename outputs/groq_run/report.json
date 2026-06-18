@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "dataset": "hotpot_mini.json",
+    "mode": "groq",
+    "num_records": 16,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 8,
+      "em": 0.875,
+      "avg_attempts": 1,
+      "avg_token_estimate": 86.38,
+      "avg_latency_ms": 1579.25
+    },
+    "reflexion": {
+      "count": 8,
+      "em": 1.0,
+      "avg_attempts": 1.25,
+      "avg_token_estimate": 143.62,
+      "avg_latency_ms": 7061.25
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.125,
+      "attempts_abs": 0.25,
+      "tokens_abs": 57.24,
+      "latency_abs": 5482.0
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 7,
+        "entity_drift": 1
+      },
+      "reflexion": {
+        "none": 8
+      }
+    },
+    "by_mode": {
+      "none": 15,
+      "entity_drift": 1
+    },
+    "analyzed_modes": [
+      "entity_drift"
+    ]
+  },
+  "examples": [
+    {
+      "qid": "hp1",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "University of Oxford",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "The River Thames flows through London.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "The instrument Antonio Vivaldi mainly played was the violin.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "The Pacific Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "Algebra",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "The Red Sea borders the country where Petra is located.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "The language family of the primary language of Brazil is the Romance language family.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "To find the answer, we need to identify the required intermediate entities: \n1. The country whose capital is Kathmandu.\n2. The highest mountain in that country.\n3. The mountain range that contains the highest mountain.\n\nFrom the context, we know that Kathmandu is the capital city of Nepal. \nSo, the country whose capital is Kathmandu is Nepal.\n\nThe highest mountain in Nepal is Mount Everest.\n\nMount Everest is part of the Himalayas.\n\nTherefore, the mountain range that contains the highest mountain in the country whose capital is Kathmandu is the Himalayas.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "University of Oxford",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "The River Thames flows through London.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "The composer of The Four Seasons mainly played the violin.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "The Pacific Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "Algebra",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp6",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "To answer the question, I need to identify the required intermediate entities: \n1. Petra\n2. Jordan\n3. The sea bordering Jordan\n\nFrom the context, I know that Petra is located in Jordan. To find the sea bordering Jordan, I will check the context for Jordan's geographical information. \n\nAccording to the context, Jordan borders the Dead Sea to the west. Therefore, the final answer is:\n\nThe Dead Sea.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "The language family of the primary language of Brazil is the Romance language family.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The country whose capital is Kathmandu.\n2. The highest mountain in that country.\n3. The mountain range that contains the highest mountain.\n\nFrom the context, we know that Kathmandu is the capital city of Nepal. \nSo, the first intermediate entity is Nepal.\n\nThe second intermediate entity is the highest mountain in Nepal, which is Mount Everest.\n\nThe third intermediate entity is the mountain range that contains Mount Everest, which is the Himalayas.\n\nTherefore, the mountain range that contains the highest mountain in the country whose capital is Kathmandu is the Himalayas.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

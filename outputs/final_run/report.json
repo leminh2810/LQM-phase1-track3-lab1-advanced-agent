@@ -1,0 +1,2066 @@
+{
+  "meta": {
+    "dataset": "hotpot_100_mock.json",
+    "mode": "mock",
+    "num_records": 200,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 100,
+      "em": 0.5,
+      "avg_attempts": 1,
+      "avg_token_estimate": 55.91,
+      "avg_latency_ms": 1
+    },
+    "reflexion": {
+      "count": 100,
+      "em": 1.0,
+      "avg_attempts": 1.5,
+      "avg_token_estimate": 98.86,
+      "avg_latency_ms": 1.51
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.5,
+      "attempts_abs": 0.5,
+      "tokens_abs": 42.95,
+      "latency_abs": 0.51
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 50,
+        "incomplete_multi_hop": 13,
+        "wrong_final_answer": 13,
+        "entity_drift": 24
+      },
+      "reflexion": {
+        "none": 100
+      }
+    },
+    "by_mode": {
+      "none": 150,
+      "incomplete_multi_hop": 13,
+      "wrong_final_answer": 13,
+      "entity_drift": 24
+    },
+    "analyzed_modes": [
+      "entity_drift",
+      "incomplete_multi_hop",
+      "wrong_final_answer"
+    ]
+  },
+  "examples": [
+    {
+      "qid": "hp1_rep001",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep002",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep003",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep004",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep005",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep006",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep007",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep008",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep009",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep010",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep011",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep012",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep013",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep014",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep015",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep016",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep017",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep018",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep019",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep020",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep021",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep022",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep023",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep024",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep025",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep026",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep027",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep028",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep029",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep030",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep031",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep032",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep033",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep034",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep035",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep036",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep037",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep038",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep039",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep040",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep041",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep042",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep043",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep044",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep045",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep046",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep047",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep048",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep049",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep050",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep051",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep052",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep053",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep054",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep055",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep056",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep057",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep058",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep059",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep060",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep061",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep062",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep063",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep064",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep065",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep066",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep067",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep068",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep069",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep070",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep071",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep072",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep073",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep074",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep075",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep076",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep077",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep078",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep079",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep080",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep081",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep082",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep083",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep084",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep085",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep086",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep087",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep088",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep089",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep090",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep091",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep092",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp5_rep093",
+      "agent_type": "react",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep094",
+      "agent_type": "react",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Red Sea",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp7_rep095",
+      "agent_type": "react",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep096",
+      "agent_type": "react",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Andes",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "entity_drift",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep097",
+      "agent_type": "react",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep098",
+      "agent_type": "react",
+      "gold_answer": "River Thames",
+      "predicted_answer": "London",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp3_rep099",
+      "agent_type": "react",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep100",
+      "agent_type": "react",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp1_rep001",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep002",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep003",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep004",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep005",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep006",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep007",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep008",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep009",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep010",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep011",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep012",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep013",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep014",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep015",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep016",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep017",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep018",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep019",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep020",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep021",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep022",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep023",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep024",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep025",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep026",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep027",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep028",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep029",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep030",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep031",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep032",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep033",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep034",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep035",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep036",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep037",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep038",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep039",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep040",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep041",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep042",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep043",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep044",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep045",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep046",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep047",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep048",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep049",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep050",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep051",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep052",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep053",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep054",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep055",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep056",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep057",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep058",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep059",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep060",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep061",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep062",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep063",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep064",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep065",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep066",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep067",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep068",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep069",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep070",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep071",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep072",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep073",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep074",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep075",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep076",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep077",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep078",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep079",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep080",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep081",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep082",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep083",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep084",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep085",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep086",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep087",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep088",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep089",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep090",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep091",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep092",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp5_rep093",
+      "agent_type": "reflexion",
+      "gold_answer": "mathematics",
+      "predicted_answer": "mathematics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp6_rep094",
+      "agent_type": "reflexion",
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Dead Sea",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp7_rep095",
+      "agent_type": "reflexion",
+      "gold_answer": "Romance",
+      "predicted_answer": "Romance",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp8_rep096",
+      "agent_type": "reflexion",
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Himalayas",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp1_rep097",
+      "agent_type": "reflexion",
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Oxford University",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp2_rep098",
+      "agent_type": "reflexion",
+      "gold_answer": "River Thames",
+      "predicted_answer": "River Thames",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hp3_rep099",
+      "agent_type": "reflexion",
+      "gold_answer": "violin",
+      "predicted_answer": "violin",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hp4_rep100",
+      "agent_type": "reflexion",
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Pacific Ocean",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

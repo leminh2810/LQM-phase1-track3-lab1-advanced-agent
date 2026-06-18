@@ -1,0 +1,461 @@
+{
+  "meta": {
+    "dataset": "hotpot_golden.json",
+    "mode": "groq",
+    "num_records": 40,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 20,
+      "em": 0.75,
+      "avg_attempts": 1,
+      "avg_token_estimate": 133.35,
+      "avg_latency_ms": 100667.4
+    },
+    "reflexion": {
+      "count": 20,
+      "em": 0.95,
+      "avg_attempts": 1.5,
+      "avg_token_estimate": 400.75,
+      "avg_latency_ms": 231938.35
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.2,
+      "attempts_abs": 0.5,
+      "tokens_abs": 267.4,
+      "latency_abs": 131270.95
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 15,
+        "wrong_final_answer": 5
+      },
+      "reflexion": {
+        "none": 19,
+        "wrong_final_answer": 1
+      }
+    },
+    "by_mode": {
+      "none": 34,
+      "wrong_final_answer": 6
+    },
+    "analyzed_modes": [
+      "wrong_final_answer"
+    ]
+  },
+  "examples": [
+    {
+      "qid": "gold1",
+      "agent_type": "react",
+      "gold_answer": "Beijing",
+      "predicted_answer": "The capital of the country where the Great Wall was built is Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "react",
+      "gold_answer": "classical",
+      "predicted_answer": "The composer of Swan Lake, Pyotr Ilyich Tchaikovsky, is most known for composing music in the Romantic genre.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "react",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "The currency used in the country where Machu Picchu is located is the Peruvian sol.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "react",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "The Mediterranean Sea.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "react",
+      "gold_answer": "C",
+      "predicted_answer": "The Linux kernel was originally written in C.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "react",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "The official language of the country that borders France to the northeast and has Brussels as its capital is Dutch, French, or German.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "react",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "The award that the director of the 1994 film that is set in Shawshank State Penitentiary did not receive from the Academy is an Oscar.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "react",
+      "gold_answer": "Mars",
+      "predicted_answer": "The Curiosity rover is currently exploring Mars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "react",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "The Colosseum is located in Rome, Italy. The highest point in Italy is Mont Blanc (Monte Bianco) at 4,808 metres, but it is located on the border with France, not in Rome.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "react",
+      "gold_answer": "uranium",
+      "predicted_answer": "Einstein's work on general relativity and mass-energy equivalence laid the groundwork for nuclear energy, but he did not directly help theorize nuclear fission. However, his warning to President Roosevelt about uranium fission's potential led to the Manhattan Project. \n\nThe scientist who helped theorize nuclear fission is Otto Hahn, along with Fritz Strassmann, who discovered nuclear fission in 1938.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "react",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "The Atlantic Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "react",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "The country where the Taj Mahal is located is India.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "react",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "To find the population of the city where the headquarters of the company that created the iPhone is located, we need to identify the required intermediate entities.\n\n1. The company that created the iPhone is Apple Inc.\n2. Apple Inc. is headquartered in Cupertino, California.\n3. Cupertino, California has a population of approximately 66,000.\n\nTherefore, the population of the city where the headquarters of the company that created the iPhone is located is approximately 66,000.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "react",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "The required intermediate entities are: \n- Mount Kilimanjaro's continent\n- The Arabian Peninsula's location\n\nThe continent where Mount Kilimanjaro is located is Africa. \nAfrica is separated from the Arabian Peninsula by the Red Sea and the Bab-el-Mandeb strait. \n\nThe Bab-el-Mandeb strait separates Africa from the Arabian Peninsula.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "react",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The celestial body that causes tides on Earth.\n2. The person who set foot on that celestial body.\n\nFrom the context, we know that the celestial body causing tides on Earth is the Moon. \n\nNow, we need to find the person who set foot on the Moon. According to the context, Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission.\n\nTherefore, the final answer is:\nNeil Armstrong.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "react",
+      "gold_answer": "football",
+      "predicted_answer": "The sport that the club that plays at Camp Nou is known for is football.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "react",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "To find the deepest point in the ocean that borders Japan to the east, we need to identify the ocean that borders Japan to the east and then find its deepest point.\n\nThe ocean that borders Japan to the east is the Pacific Ocean.\n\nThe Pacific Ocean's deepest point is the Challenger Deep in the Mariana Trench, but the Mariana Trench is not located near Japan. \n\nHowever, the deepest point in the ocean that borders Japan to the east is the Izu Trench, which is located near Japan and has a depth of approximately 10,047 metres.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "react",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "The architect who designed the museum in Bilbao that is part of the Guggenheim network is Canadian-American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "react",
+      "gold_answer": "Africa",
+      "predicted_answer": "Africa",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "react",
+      "gold_answer": "1951",
+      "predicted_answer": "The treaty signed that ended the war in which the atomic bomb was first used in combat was the Treaty of San Francisco, which was signed in 1951.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold1",
+      "agent_type": "reflexion",
+      "gold_answer": "Beijing",
+      "predicted_answer": "The capital of the country where the Great Wall was built is Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "reflexion",
+      "gold_answer": "classical",
+      "predicted_answer": "Based on the context provided, the required intermediate entities are:\n\n1. Swan Lake\n2. Pyotr Ilyich Tchaikovsky\n\nTo answer the question, I will verify the final entity (Tchaikovsky's genre of music) against the specific context of Swan Lake and his overall style.\n\nThe specific context of Swan Lake does not explicitly mention the genre of music, but it is a ballet composed by Tchaikovsky. Considering his overall style and period, Tchaikovsky is known for his classical music compositions, particularly in the Romantic period.\n\nHowever, the question asks for the genre of music Tchaikovsky is most known for, which is not explicitly mentioned in the context. Given the broader context of his Romantic period and classical music compositions, I will provide an answer that aligns with his overall style.\n\nThe final answer is: Classical music.",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "reflexion",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "The Peruvian sol.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "reflexion",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "The Mediterranean Sea.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "reflexion",
+      "gold_answer": "C",
+      "predicted_answer": "The Linux kernel was originally written in C.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "reflexion",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: the country that borders France to the northeast and has Brussels as its capital.\n\nFrom the context, we know that France is bordered to the northeast by Belgium, Luxembourg, and Germany. We also know that Belgium has Brussels as its capital.\n\nHowever, we need to find a country that borders France to the northeast and has Brussels as its capital. Since Belgium is the only country that matches the second condition, we need to verify if it also borders France to the northeast.\n\nAccording to the context, Belgium indeed borders France to the northeast. Therefore, the official language of Belgium is the answer to the question.\n\nThe official language of Belgium is Dutch, French, and German.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "reflexion",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "The required intermediate entities are: \n- The Shawshank Redemption (film)\n- Frank Darabont (director)\n- Academy Award\n\nBased on the context, the director of the 1994 film \"The Shawshank Redemption\" is Frank Darabont, and he has not won an Academy Award despite multiple nominations.\n\nHowever, the question asks about the award received by the director from the Academy, implying that the director did receive an award. Since the context states that the film was nominated for seven Academy Awards, it is likely that the director received an award for one of the nominations.\n\nThe final answer is: \nNo award is mentioned in the context, but it is likely that Frank Darabont received an award for one of the nominations.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "reflexion",
+      "gold_answer": "Mars",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The NASA rover Curiosity\n2. The planet it is currently exploring\n\nFrom the context, we know that Curiosity is a Mars rover. Therefore, the planet it is currently exploring is Mars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "reflexion",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "The highest mountain in Italy, where the Colosseum is located, is Mont Blanc.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "reflexion",
+      "gold_answer": "uranium",
+      "predicted_answer": "To answer the question, I need to identify the required intermediate entities: \n- The scientist who developed the theory of general relativity\n- The element that can be released from atoms for enormous energy\n\nFrom the context, I know that the scientist who developed the theory of general relativity is Albert Einstein. I also know that his work contributed to the theoretical foundation of nuclear energy.\n\nThe key information being asked is the element that can be released from atoms for enormous energy. Based on this, I will provide a direct and specific answer.\n\nUranium.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "reflexion",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "The Atlantic Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "reflexion",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The country where the Taj Mahal is located.\n2. The type of government of that country.\n\nFrom the context, we know that the Taj Mahal is located in India. \n\nNow, we need to find the type of government of India. According to the context, India is a federal parliamentary democratic republic.\n\nTherefore, the final answer is: \nFederal parliamentary democratic republic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "reflexion",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "To find the population of the city where the headquarters of the company that created the iPhone is located, we need to identify the required intermediate entities.\n\n1. The company that created the iPhone is Apple Inc.\n2. Apple Inc. is headquartered in Cupertino, California.\n3. Cupertino, California is the city we are looking for.\n\nNow, let's find the population of Cupertino, California, which is approximately 66,000.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "reflexion",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The continent where Mount Kilimanjaro is located.\n2. The Arabian Peninsula.\n\nFrom the context, we know that Mount Kilimanjaro is located in Tanzania, Africa. \nAfrica is the continent where Mount Kilimanjaro is located.\n\nThe Arabian Peninsula is separated from Africa by the Red Sea and the Bab-el-Mandeb strait.\n\nSince Mount Kilimanjaro is located in Africa, the strait that separates Africa from the Arabian Peninsula is the Bab-el-Mandeb strait.\n\nThe final answer is: The Bab-el-Mandeb strait.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "reflexion",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities: \n1. The celestial body that causes tides on Earth.\n2. The person who set foot on that celestial body.\n\nFrom the context, we know that the celestial body causing tides on Earth is the Moon. \n\nNow, we need to find the person who set foot on the Moon. According to the context, Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20, 1969.\n\nTherefore, the final answer is: Neil Armstrong.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "reflexion",
+      "gold_answer": "football",
+      "predicted_answer": "The club that plays at Camp Nou is known for football.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "reflexion",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "To answer the question, I need to identify the required intermediate entities. \n\n1. The deepest point in the Pacific Ocean is the Challenger Deep.\n2. The Challenger Deep is located in the Mariana Trench.\n3. The Mariana Trench is not directly related to Japan, but the Pacific Ocean is.\n\nHowever, since the Pacific Ocean borders Japan to the east, I can conclude that the deepest point in the ocean that borders Japan to the east is the Challenger Deep, which is located in the Pacific Ocean.\n\nFinal answer: The Challenger Deep.",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "reflexion",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "The architect who designed the museum in Bilbao that is part of the Guggenheim network was Canadian-American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "reflexion",
+      "gold_answer": "Africa",
+      "predicted_answer": "Africa",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "reflexion",
+      "gold_answer": "1951",
+      "predicted_answer": "1951",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}

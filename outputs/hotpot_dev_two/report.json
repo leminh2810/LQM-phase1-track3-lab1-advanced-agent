@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "dataset": "hotpot_dev_distractor_v1.json",
+    "mode": "groq",
+    "num_records": 4,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 2,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1193.5,
+      "avg_latency_ms": 25446
+    },
+    "reflexion": {
+      "count": 2,
+      "em": 1.0,
+      "avg_attempts": 1.5,
+      "avg_token_estimate": 3105,
+      "avg_latency_ms": 56841
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.0,
+      "attempts_abs": 0.5,
+      "tokens_abs": 1911.5,
+      "latency_abs": 31395
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 2
+      },
+      "reflexion": {
+        "none": 2
+      }
+    },
+    "by_mode": {
+      "none": 4
+    },
+    "analyzed_modes": []
+  },
+  "examples": [
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "To determine if Scott Derrickson and Ed Wood are of the same nationality, we need to identify the required intermediate entities: the nationality of Scott Derrickson and the nationality of Ed Wood.\n\nFrom the context, we can see that Scott Derrickson is an American director, screenwriter, and producer. \n\nWe also know that Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\n\nThey are of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c7595554299585d9e36b6",
+      "agent_type": "react",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "To answer the question, we need to identify the required intermediate entities. \n\n1. The woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is Shirley Temple.\n2. We need to find the government position held by Shirley Temple.\n\nFrom the context, we know that Shirley Temple was an American actress, singer, dancer, businesswoman, and diplomat. She was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States.\n\nTherefore, the government position held by the woman who portrayed Corliss Archer in the film \"Kiss and Tell\" is:\n\nChief of Protocol of the United States.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b57f25542995d1e6f1371",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "To answer the question, we need to identify the nationality of both Scott Derrickson and Ed Wood. \n\nThe required intermediate entities are:\n- Scott Derrickson's nationality\n- Ed Wood's nationality\n\nFrom the context, we can see that:\n- Scott Derrickson is an American director, screenwriter, and producer.\n- Ed Wood was an American filmmaker, actor, writer, producer, and director.\n\nTherefore, the final answer is:\nScott Derrickson and Ed Wood were of the same nationality.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8c7595554299585d9e36b6",
+      "agent_type": "reflexion",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "Janet Waldo, the voice actress who portrayed Corliss Archer in the radio series \"Meet Corliss Archer\", is not the correct answer. The question asks about the woman who portrayed Corliss Archer in the film \"Kiss and Tell\". \n\nThe correct answer is Shirley Temple, who played the role of Corliss Archer in the 1945 film \"Kiss and Tell\". However, the question asks about the government position held by the woman who portrayed Corliss Archer in the film \"Kiss and Tell\". \n\nSince Shirley Temple held various diplomatic roles, including United States ambassador to Ghana and to Czechoslovakia, and also served as Chief of Protocol of the United States, we can infer that she may have held a government position related to diplomacy or international relations. However, the question asks about a government position related to the film industry or entertainment. \n\nUpon reviewing the context, I found that the position of Lord High Treasurer or Lord Treasurer is not directly related to the film industry or entertainment. However, I also found that the position of Secretary of State for Constitutional Affairs is a British Government position, created in 2003, and it is related to the Lord Chancellor's Department. \n\nBut, I also found that the position of Lord High Treasurer or Lord Treasurer is an English government position and has been a British government position since the Acts of Union of 1707. A holder of the post would be the third-highest-ranked Great Officer of State, below the Lord High Steward and the Lord High Chancellor.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop, drifts to a wrong second-hop entity, or returns a plausible but unsupported final answer. The reflection memory is useful because the next attempt receives a compact lesson about the failed reasoning path instead of repeating the same trajectory. The remaining risks are evaluator quality, overfitting to a reflection that is too specific, and higher latency or token cost from extra attempts."
+}
